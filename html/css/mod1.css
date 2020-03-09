@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    width: 1200px;
+    height: 200px;
+    padding: 10px;
+    margin: auto;
+}
+.nav{
+    width: 1200px;
+    height: 200px;
+    background-color: #333;
+    margin: auto;
+}
+.bigimg{
+    width: 1200px;
+    height: 400px;
+    background-color: green;
+    margin: auto;
+}
+.content{
+    width: 1200px;
+    height: 200px;
+    background-color: magenta;
+    margin: auto;
+}
+.footer{
+    width: 1200px;
+    height: 80px;
+    background-color: #333;
+    margin: auto;
+    font-size: 24px;
+    color: lightblue;
+    line-height: 80px;
+    text-align: center;
+}
