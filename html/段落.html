@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div>.p1{
+            direction: ltr;
+        }
+        div>.p2{
+            direction: rtl;
+        }
+        div>.p3{
+            word-spacing: 5px;
+        }
+        div>.p4{
+            width: 100px;
+            height: 30;
+            background-color:aqua;
+            line-height: 30;
+            font-size: 18px;
+            white-space: nowrap;/*超过部分不换行*/
+            overflow: hidden;/*隐藏超过部分*/
+            text-overflow: ellipsis;/*用省略号代替*/
+        }
+        div>.p5.img{
+            vertical-align: bottom;
+        }
+        div>.p6.img{
+            float: left;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="p1">看看字间距</p>
+        <p class="p2">看看字间距</p>
+        <p class="p3">看看字间距</p>
+        <p class="p3">my name is cjy</p>
+        <p class="p5">
+            <img src="images/css.jpg">
+            Web前端开发之CSS段落
+        </p>
+        <p class="p6">
+            <img src="images/css.jpg">
+            Web前端开发之CSS段落
+        </p>
+    </div>
+</body>
+</html>

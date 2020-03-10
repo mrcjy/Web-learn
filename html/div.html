@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 1200px;
+            height: 300px;
+            background-color: antiquewhite;
+            font-size: 40px;
+        }
+        div>div{
+            float: left;
+            /* 所有的值横向排列 */
+        }
+        div>.one{
+            width: 30%;
+            height: 100%;
+            background-color:blueviolet;
+            font-size: 0.8em;
+        }
+        div>.two{
+            width: 30%;
+            height: 100%;
+            background-color:blueviolet;
+            font-size: 0.5em;
+        }
+        div>.three{
+            width: 40%;
+            height: 100%;
+            background-color:blueviolet;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="one">div01</div>
+        <div class="two">din02</div>
+        <div class="three">div03</div>
+    </div>
+</body>
+</html>

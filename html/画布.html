@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>计算多边形面积</title>
+    
+    <style>      
+        .div01{
+            width:900;
+            height:600;
+            margin: auto;
+        }
+        .div02{
+            width: 300px;
+            height:600px;
+        }
+        .div03{
+            width: 300px;
+            color: darkslategray;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <div>
+        <div class="div01" onmousemove="cnvs_getCoordinates(event)" 
+        onmousedown="leftMouseDowm(event)" style="float: left;">    
+        
+        <canvas id="myCanvas" width="900" height="600" style="border: 2px solid;"></canvas>
+        </div>
+        <div class="div02" style="float: left;">
+            <div id="xycoordinates"></div>
+            <div>
+                <p id="xy"></p>
+            </div>
+        </div>
+    </div> 
+    <div>
+        <button type="button" onclick="compute()" >计算多边形面积</button>
+        <p id="aha"></p>
+    </div>
+    <script type="text/javascript"> 
+        var c=document.getElementById("myCanvas");
+        var cxt=c.getContext("2d");
+        var zx;
+        var zy;
+        var array_x=[];
+        var array_y=[];
+        function cnvs_getCoordinates(e)
+        {
+            x=e.clientX;
+            y=e.clientY;
+            document.getElementById("xycoordinates").innerHTML="Coordinates: (" + x + "," + y + ")";            
+
+
+            if(array_x.length>0){
+                cxt.fillStyle="#ffffff";
+                cxt.beginPath();
+                cxt.fillRect(0,0,c.width,c.height);
+                cxt.closePath();
+                cxt.strokeStyle = "black";
+                cxt.moveTo(array_x[array_x.length-1],array_y[array_y.length-1]);
+                cxt.lineTo(x,y);
+                cxt.stroke();
+                
+            }
+            else{}
+            var flen =array_x.length-1;
+            for(i=0;i<flen;i++){
+                cxt.moveTo(array_x[i],array_y[i]);
+                cxt.lineTo(array_x[i+1],array_y[i+1]);
+                cxt.stroke();
+            }
+            zx=x;
+            zy=y;
+        }    
+         
+        function cnvs_clearCoordinates()
+        {
+            document.getElementById("xycoordinates").innerHTML="";
+        }
+            
+        function leftMouseDowm(e)
+        {
+            
+            array_x.push(e.clientX);
+            array_y.push(e.clientY);
+            document.getElementById("xy").innerHTML+="Coordinates: (" + x + "," + y + ")"+array_x.length;
+        }
+        function compute()
+        {
+            document.getElementById("aha").innerHTML=b;
+            if(array_x.length>0){
+                cxt.moveTo(array_x[array_x.length-1],array_y[array_y.length-1]);
+                cxt.lineTo(array_x[0],array_y[0]);
+                cxt.stroke();
+            }
+            array_x.length=0;
+            array_y.length=0;
+            
+        }
+    </script>
+</body>
+</html>

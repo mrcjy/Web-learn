@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .div01{
+            width: 1000px;
+            height: 400px;
+            margin: auto;
+            background-color:lightblue;
+        }
+        .div02{
+            width: 1000px;
+            height: 400px;
+            position: relative;
+            left: 0px;
+            top: 0px;
+        }
+        .div02>.div031{
+            width:200px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            line-height: 40px;
+        }
+        .div031>.div04{
+            width:800px;
+            height: 400px;
+            position: absolute;
+            left: 200px;
+            top: 0px;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+        .div031:hover{
+            background-color: rgba(235, 80, 8, 0.884);
+            color: rgba(255,255,255,1);
+            font-weight: bold;
+
+        }
+        .div031:hover>.div04{
+            display: block;
+        }
+        .footer{
+            width: 1000px;
+            height: 400px;
+            margin: auto;
+            background-color:rgb(32, 32, 32);
+            position: relative;
+        }
+        .footer>.qq{
+            position: absolute;
+            width: 200px;
+            height: 300px;
+            left: 600px;
+            top: 50px;
+            background-color: lightcyan;
+            color: aliceblue;
+        }
+        .footer>.qq>.tou{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            left: 40px;
+            top: 150px;
+            float: left;
+        }
+        .footer>.qq>.tou>img{
+            width: 50px;
+            height: 50px;
+            filter: grayscale(100%);
+        }
+        .footer>.qq>.tou>.ma{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: -25px;
+            top:-120px;
+            display: none;
+        }
+        .footer>.qq>.tou>.ma>img{
+            width: 100px;
+            height: 100px;
+        }
+        .footer>.qq>.tou:hover>img{
+            filter: grayscale(0);
+        }
+        .footer>.qq>.tou:hover>.ma{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="div01">
+        <div class="div02">
+            <div class="div031">111
+                <div class="div04">
+                    11111
+                </div>
+            </div>
+            <div class="div031">222
+                <div class="div04">
+                    22222
+                </div>
+            </div>
+            <div class="div031">333
+                <div class="div04">
+                    33333
+                </div>
+            </div>
+            <div class="div031">444
+                <div class="div04">
+                    44444
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="qq">
+            <div class="tou">
+                <img src="images/11.png">            
+                <div class="ma"> 
+                    <img src="images/2.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

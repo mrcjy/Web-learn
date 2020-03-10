@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .class01{
+            width: 1000;
+            height: 800;
+            float: left;
+            margin-right: 20px;
+            position: relative;
+        }
+        .class01::after{
+            float:none;
+        }
+        .class02{
+            width: 1000px;
+            height: 536px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background-color: rgba(200,200,200,0.5);
+        }
+        .class02:hover{
+            background-color: rgba(200,200,200,0);
+        }
+        .class01:nth-child(2)>img{
+            opacity: 0.5;
+        }
+        .class01:nth-child(2)>img:hover{
+            opacity: 1;
+        }
+        .class01:nth-child(3)>img{
+            opacity: 0.5;
+        }
+        .class01:nth-child(3)>img:hover{
+            opacity: 1;
+        }
+        .class01:nth-child(3){
+            position: relative;
+        }
+        .class01:nth-child(3)>div{
+            width: 1000px;
+            height: 100px;
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            font-weight: bold;
+            line-height: 100px;
+            position: absolute;
+            text-align: center;
+            bottom: 0px;
+            left: 0px;
+            display: none;
+        }
+        .class01:nth-child(3):hover div{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="class01">
+        <img src="images/背景.jpg"width="1000px" >
+        <div class="class02"></div>
+    </div>
+    <div class="class01">
+        <img src="images/背景.jpg"width="1000px" >
+        <!-- <div class="class02"></div> -->
+    </div>
+    <div class="class01">
+        <img src="images/背景.jpg"width="1000px" >
+        <div>这是一个背景！！！</div>
+    </div>
+   
+</body>
+</html>
